@@ -9,6 +9,9 @@ public class Player : Character
     [SerializeField] float moveSpeed = 250f;
     [SerializeField] float jumpForce = 400f;
     [SerializeField] LayerMask groundLayerMask;
+    [SerializeField] Transform kunaiPrefab;
+    [SerializeField] Transform puzzle;
+    [SerializeField] GameObject attackArea;
 
     bool isGround;
     bool isJumping;
@@ -16,25 +19,22 @@ public class Player : Character
     bool isDead;
     Vector3 savePoint;
 
-
-    private void Start()
-    {
-        SavePoint();
-    }
-
     public override void OnInit()
     {
         base.OnInit();
-        ChangAnim("idle");
+        ChangeAnim("idle");
         isDead = false;
         isAttack = false;
         isJumping = false;
         transform.position = savePoint;
+        SavePoint();
+        DeActiveAttack();
     }
 
     public override void Despawn()
     {
         base.Despawn();
+        OnInit();
     }
 
     protected override void OnDead()
@@ -64,25 +64,25 @@ public class Player : Character
                 Jump();
             }
 
-            if(Input.GetKeyDown(KeyCode.C) && isGround)
+            if(Input.GetKeyDown(KeyCode.C))
             {
                 Attack();
             }
-            if(Input.GetKeyDown(KeyCode.V) && isGround)
+            if(Input.GetKeyDown(KeyCode.V))
             {
                 Throw();
             }
 
             if (Mathf.Abs(horizontal) > Mathf.Epsilon)
             {
-                ChangAnim("run");
+                ChangeAnim("run");
             }
 
         }
 
         if(!isGround && rb.velocity.y < 0)
         {
-            ChangAnim("fall");
+            ChangeAnim("fall");
             isJumping = false;
         }
 
@@ -94,7 +94,7 @@ public class Player : Character
 
         else if(isGround)
         {
-            ChangAnim("idle");
+            ChangeAnim("idle");
             rb.velocity = Vector2.zero;
         }
     }
@@ -102,29 +102,41 @@ public class Player : Character
 
     void Throw()
     {
-        ChangAnim("throw");
+        Instantiate(kunaiPrefab, puzzle.transform.position, puzzle.transform.rotation);
+        ChangeAnim("throw");
         isAttack = true;
         Invoke(nameof(ResetAttack), 0.3f);
 
     }
     void Attack()
     {
-        ChangAnim("attack");
+        ChangeAnim("attack");
         isAttack = true;
-        Invoke(nameof(ResetAttack), 0.3f);
-
+        Invoke(nameof(ResetAttack), 0.5f);
+        ActiveAttack();
+        Invoke(nameof(DeActiveAttack), 0.5f);
     }
 
     void ResetAttack()
     {
-        ChangAnim("idle");
+        ChangeAnim("idle");
         isAttack = false;
+    }
+
+    void ActiveAttack()
+    {
+        attackArea.SetActive(true);
+    }
+
+    void DeActiveAttack()
+    {
+        attackArea.SetActive(false);
     }
 
     void Jump()
     {
         rb.AddForce(Vector2.up * jumpForce);
-        ChangAnim("jump");
+        ChangeAnim("jump");
         isJumping = true;
     }
 
@@ -137,7 +149,7 @@ public class Player : Character
         if (collision.CompareTag("DeadZone"))
         {
             isDead = true;
-            ChangAnim("die");
+            ChangeAnim("die");
             Invoke(nameof(OnInit), 0.5f);
         }
     }

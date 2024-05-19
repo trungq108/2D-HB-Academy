@@ -7,9 +7,9 @@ public class Character : MonoBehaviour
     [SerializeField] Animator animator;
 
     string currentAnimName;
-    float hp;
+    int hp;
 
-    public bool IsDead => hp <= 0;
+    public bool IsDead => hp == 0;
 
     private void Start()
     {
@@ -18,7 +18,7 @@ public class Character : MonoBehaviour
 
     public virtual void OnInit()
     {
-        hp = 100f;
+        hp = 100;
     }
 
     public virtual void Despawn()
@@ -28,10 +28,11 @@ public class Character : MonoBehaviour
 
     protected virtual void OnDead()
     {
-
+        ChangeAnim("die");
+        Invoke(nameof(Despawn) , 2f);
     }
 
-    protected void ChangAnim(string animName)
+    protected void ChangeAnim(string animName)
     {
         if (currentAnimName != animName)
         {
@@ -41,17 +42,12 @@ public class Character : MonoBehaviour
         }
     }
 
-    public void OnHit(float damage)
+    public void OnHit(int damage)
     {
-        if(hp > damage)
+        hp = Mathf.Clamp(hp, 0, hp - damage);
+        if(IsDead)
         {
-            hp -= damage;
-            if (IsDead)
-            {
-                OnDead();
-            }
+            OnDead();
         }
     }
-
-
 }
