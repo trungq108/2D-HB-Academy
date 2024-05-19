@@ -1,11 +1,11 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UIElements;
 
-public class Player : MonoBehaviour
+public class Player : Character
 {
     [SerializeField] Rigidbody2D rb;
-    [SerializeField] Animator animator;
     [SerializeField] float moveSpeed = 250f;
     [SerializeField] float jumpForce = 400f;
     [SerializeField] LayerMask groundLayerMask;
@@ -15,19 +15,31 @@ public class Player : MonoBehaviour
     bool isAttack;
     bool isDead;
     Vector3 savePoint;
-    string currentAnimName;
 
 
     private void Start()
     {
-        GetSavePointPosition();
+        SavePoint();
     }
 
-    void OnInit()
+    public override void OnInit()
     {
+        base.OnInit();
+        ChangAnim("idle");
         isDead = false;
         isAttack = false;
         isJumping = false;
+        transform.position = savePoint;
+    }
+
+    public override void Despawn()
+    {
+        base.Despawn();
+    }
+
+    protected override void OnDead()
+    {
+        base.OnDead();
     }
 
     void FixedUpdate()
@@ -126,11 +138,11 @@ public class Player : MonoBehaviour
         {
             isDead = true;
             ChangAnim("die");
-            Invoke(nameof(OnInit), 1f);
+            Invoke(nameof(OnInit), 0.5f);
         }
     }
 
-    public void GetSavePointPosition()
+    public void SavePoint()
     {
         savePoint = transform.position;
     }
@@ -140,16 +152,6 @@ public class Player : MonoBehaviour
         Debug.DrawLine(transform.position, transform.position + Vector3.down * 1.1f, Color.yellow);
         RaycastHit2D hit = Physics2D.Raycast(transform.position, Vector2.down, 1.1f, groundLayerMask);
         return hit.collider != null;
-    }
-
-    void ChangAnim(string animName)
-    {
-        if(currentAnimName != animName)
-        {
-            animator.ResetTrigger(animName);
-            currentAnimName = animName;
-            animator.SetTrigger(currentAnimName);
-        }
     }
 
 }

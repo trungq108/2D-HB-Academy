@@ -8,7 +8,7 @@ public class SavePoint : MonoBehaviour
     {
         if (collision.CompareTag("Player"))
         {
-            collision.GetComponent<Player>().GetSavePointPosition();
+            collision.GetComponent<Player>().SavePoint();
         }
     }
 }
