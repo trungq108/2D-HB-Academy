@@ -5,6 +5,7 @@ using UnityEngine;
 public class Kunai : MonoBehaviour
 {
     [SerializeField] Rigidbody2D rb;
+    [SerializeField] GameObject bloodVFX;
     [SerializeField] float speed = 20f;
 
     private void Start()
@@ -28,6 +29,7 @@ public class Kunai : MonoBehaviour
         if (collision.CompareTag("Enemy"))
         {
             Debug.Log("Shot");
+            Instantiate(bloodVFX, transform.position, transform.rotation);
             collision.GetComponent<Character>().OnHit(30);
             OnDespawn();
         }

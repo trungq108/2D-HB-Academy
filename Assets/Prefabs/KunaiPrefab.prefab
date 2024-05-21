@@ -204,4 +204,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rb: {fileID: 8408839017856148626}
+  bloodVFX: {fileID: 3502714178520871676, guid: 60ed8390fbf5a6f4a8823a40666b4221, type: 3}
   speed: 20

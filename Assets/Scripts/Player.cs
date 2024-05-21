@@ -23,7 +23,6 @@ public class Player : Character
     {
         base.OnInit();
         ChangeAnim("idle");
-        isDead = false;
         isAttack = false;
         isJumping = false;
         transform.position = savePoint;
@@ -42,9 +41,9 @@ public class Player : Character
         base.OnDead();
     }
 
-    void FixedUpdate()
+    void Update()
     {
-        if (isDead) { return; }
+        if (IsDead) { return; }
 
         isGround = CheckGround();
         float horizontal = Input.GetAxisRaw("Horizontal");
@@ -148,7 +147,6 @@ public class Player : Character
         }
         if (collision.CompareTag("DeadZone"))
         {
-            isDead = true;
             ChangeAnim("die");
             Invoke(nameof(OnInit), 0.5f);
         }

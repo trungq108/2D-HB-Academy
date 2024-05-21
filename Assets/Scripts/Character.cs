@@ -5,14 +5,17 @@ using UnityEngine;
 public class Character : MonoBehaviour
 {    
     [SerializeField] Animator animator;
+    [SerializeField] protected HeathBar heathBar;
+    [SerializeField] protected CombatText combatTextPrefab;
 
     string currentAnimName;
     int hp;
 
-    public bool IsDead => hp == 0;
+    public bool IsDead => hp <= 0;
 
     private void Start()
     {
+        heathBar.OnInit(100, this.transform);
         OnInit();
     }
 
@@ -45,9 +48,12 @@ public class Character : MonoBehaviour
     public void OnHit(int damage)
     {
         hp = Mathf.Clamp(hp, 0, hp - damage);
-        if(IsDead)
+        if(hp <= 0)
         {
             OnDead();
         }
+
+        Instantiate(combatTextPrefab, transform.position + Vector3.up, Quaternion.identity).OnInit(damage);
+        heathBar.SetHp(hp);
     }
 }
