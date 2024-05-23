@@ -17,6 +17,7 @@ public class Player : Character
     bool isJumping;
     bool isAttack;
     bool isDead;
+    float horizontal;
     Vector3 savePoint;
 
     public override void OnInit()
@@ -46,7 +47,7 @@ public class Player : Character
         if (IsDead) { return; }
 
         isGround = CheckGround();
-        float horizontal = Input.GetAxisRaw("Horizontal");
+      //  float horizontal = Input.GetAxisRaw("Horizontal");
 
         if(isAttack)
         {
@@ -58,7 +59,7 @@ public class Player : Character
         {
             if (isJumping) return;
 
-            if(Input.GetKeyDown(KeyCode.E) && isGround)
+            if(Input.GetKeyDown(KeyCode.E))
             {
                 Jump();
             }
@@ -98,8 +99,12 @@ public class Player : Character
         }
     }
 
+    public void SetDirection(float direct)
+    {
+        horizontal = direct;
+    }
 
-    void Throw()
+    public void Throw()
     {
         Instantiate(kunaiPrefab, puzzle.transform.position, puzzle.transform.rotation);
         ChangeAnim("throw");
@@ -107,13 +112,19 @@ public class Player : Character
         Invoke(nameof(ResetAttack), 0.3f);
 
     }
-    void Attack()
+    public void Attack()
     {
         ChangeAnim("attack");
         isAttack = true;
         Invoke(nameof(ResetAttack), 0.5f);
         ActiveAttack();
         Invoke(nameof(DeActiveAttack), 0.5f);
+    }
+    public void Jump()
+    {
+        rb.AddForce(Vector2.up * jumpForce);
+        ChangeAnim("jump");
+        isJumping = true;
     }
 
     void ResetAttack()
@@ -132,17 +143,11 @@ public class Player : Character
         attackArea.SetActive(false);
     }
 
-    void Jump()
-    {
-        rb.AddForce(Vector2.up * jumpForce);
-        ChangeAnim("jump");
-        isJumping = true;
-    }
-
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.CompareTag("Coin"))
         {
+            UIController.Instance.SetCoin(1);
             Destroy(collision.gameObject);
         }
         if (collision.CompareTag("DeadZone"))
