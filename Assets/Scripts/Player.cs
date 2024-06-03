@@ -44,10 +44,10 @@ public class Player : Character
 
     void Update()
     {
-        if (IsDead) { return; }
+        if(IsDead) { return; }
 
         isGround = CheckGround();
-      //  float horizontal = Input.GetAxisRaw("Horizontal");
+        float horizontal = Input.GetAxisRaw("Horizontal");
 
         if(isAttack)
         {
@@ -68,6 +68,7 @@ public class Player : Character
             {
                 Attack();
             }
+
             if(Input.GetKeyDown(KeyCode.V))
             {
                 Throw();
@@ -86,17 +87,26 @@ public class Player : Character
             isJumping = false;
         }
 
-        if(Mathf.Abs(horizontal) > Mathf.Epsilon)
+        if (Mathf.Abs(horizontal) > Mathf.Epsilon)
         {
-            rb.velocity = new Vector2(horizontal*moveSpeed*Time.fixedDeltaTime, rb.velocity.y);
-            transform.eulerAngles = new Vector3(0, horizontal > 0 ? 0:180, 0);
+            rb.velocity = new Vector2(horizontal * moveSpeed * Time.fixedDeltaTime, rb.velocity.y);
+            transform.eulerAngles = new Vector3(0, horizontal > 0 ? 0 : 180, 0);
         }
 
-        else if(isGround)
+        else if(isGround && !isAttack)
         {
             ChangeAnim("idle");
             rb.velocity = Vector2.zero;
         }
+    }
+
+    private void FixedUpdate()
+    {
+        //if (Mathf.Abs(horizontal) > Mathf.Epsilon)
+        //{
+        //    rb.velocity = new Vector2(horizontal * moveSpeed * Time.fixedDeltaTime, rb.velocity.y);
+        //    transform.eulerAngles = new Vector3(0, horizontal > 0 ? 0 : 180, 0);
+        //}
     }
 
     public void SetDirection(float direct)
@@ -112,13 +122,17 @@ public class Player : Character
         Invoke(nameof(ResetAttack), 0.3f);
 
     }
+
     public void Attack()
     {
-        ChangeAnim("attack");
-        isAttack = true;
-        Invoke(nameof(ResetAttack), 0.5f);
-        ActiveAttack();
-        Invoke(nameof(DeActiveAttack), 0.5f);
+        if (isGround)
+        {
+            ChangeAnim("attack");
+            isAttack = true;
+            Invoke(nameof(ResetAttack), 0.5f);
+            ActiveAttack();
+            Invoke(nameof(DeActiveAttack), 0.5f);
+        }
     }
     public void Jump()
     {

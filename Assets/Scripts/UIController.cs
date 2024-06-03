@@ -6,10 +6,10 @@ using UnityEngine;
 public class UIController : MonoBehaviour
 {
     public static UIController instance;
-    public static UIController Instance { get; private set; }
+    public static UIController Instance => instance;
 
     [SerializeField] TextMeshProUGUI coinText;
-    int coinIndex;
+    private int coinIndex = 0;
 
     private void Awake()
     {

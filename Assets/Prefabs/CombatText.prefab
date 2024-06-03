@@ -31,6 +31,7 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 2190975909082321358}
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -91,8 +92,8 @@ GameObject:
   - component: {fileID: 2422552660757710987}
   - component: {fileID: 7756624644728678815}
   - component: {fileID: 5281499878365696474}
-  - component: {fileID: 905863063281481814}
-  - component: {fileID: 950243005359609874}
+  - component: {fileID: 4945770297765862437}
+  - component: {fileID: 6011447947043158905}
   m_Layer: 5
   m_Name: CombatText
   m_TagString: Untagged
@@ -114,10 +115,11 @@ RectTransform:
   m_Children:
   - {fileID: 7147900461150715169}
   m_Father: {fileID: 0}
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: -6.98999, y: 0.58000183}
+  m_AnchoredPosition: {x: -6.98999, y: 0.5800171}
   m_SizeDelta: {x: 1600, y: 720}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!223 &2422552660757710987
@@ -137,9 +139,7 @@ Canvas:
   m_OverrideSorting: 0
   m_OverridePixelPerfect: 1
   m_SortingBucketNormalizedSize: 0
-  m_VertexColorAlwaysGammaSpace: 0
   m_AdditionalShaderChannelsFlag: 0
-  m_UpdateRectTransformForStandalone: 0
   m_SortingLayerID: 0
   m_SortingOrder: 31
   m_TargetDisplay: 0
@@ -183,20 +183,19 @@ MonoBehaviour:
   m_BlockingMask:
     serializedVersion: 2
     m_Bits: 4294967295
---- !u!114 &905863063281481814
-MonoBehaviour:
+--- !u!225 &4945770297765862437
+CanvasGroup:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2838488971047681800}
   m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 84fc2a9b77f87cc41a8d01266b8b606c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  damage: {fileID: 37880302879630059}
---- !u!95 &950243005359609874
+  m_Alpha: 1
+  m_Interactable: 1
+  m_BlocksRaycasts: 1
+  m_IgnoreParentGroups: 0
+--- !u!95 &6011447947043158905
 Animator:
   serializedVersion: 5
   m_ObjectHideFlags: 0

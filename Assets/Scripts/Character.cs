@@ -7,6 +7,7 @@ public class Character : MonoBehaviour
     [SerializeField] Animator animator;
     [SerializeField] protected HeathBar heathBar;
     [SerializeField] protected CombatText combatTextPrefab;
+    [SerializeField] private int maxHp = 100;
 
     string currentAnimName;
     int hp;
@@ -15,13 +16,13 @@ public class Character : MonoBehaviour
 
     private void Start()
     {
-        heathBar.OnInit(100, this.transform);
+        heathBar.OnInit(maxHp, this.transform);
         OnInit();
     }
 
     public virtual void OnInit()
     {
-        hp = 100;
+        hp = maxHp;
     }
 
     public virtual void Despawn()
@@ -54,6 +55,12 @@ public class Character : MonoBehaviour
         }
 
         Instantiate(combatTextPrefab, transform.position + Vector3.up, Quaternion.identity).OnInit(damage);
+        heathBar.SetHp(hp);
+    }
+
+    public void Healing(float helthPercent)
+    {
+        hp = Mathf.Clamp(hp, (int)(hp + maxHp * helthPercent), maxHp);
         heathBar.SetHp(hp);
     }
 }
