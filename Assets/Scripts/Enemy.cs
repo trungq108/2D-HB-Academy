@@ -12,6 +12,7 @@ public class Enemy : Character
     private IState currentState;
     bool isRight = true;
     [SerializeField] GameObject attackArea;
+    [SerializeField] LootBag lootBag;
 
     Character target; public Character Target => target;
 
@@ -39,6 +40,7 @@ public class Enemy : Character
 
     protected override void OnDead()
     {
+        lootBag.InstantiateItem(transform.position);
         ChangeState(null);
         base.OnDead();
     }
@@ -116,7 +118,7 @@ public class Enemy : Character
         this.isRight = isRight;
         transform.rotation = isRight ? Quaternion.Euler(Vector3.zero) : Quaternion.Euler(Vector3.up * 180);
     }
-    void ActiveAttack()
+    public virtual void ActiveAttack()
     {
         attackArea.SetActive(true);
     }
@@ -125,4 +127,5 @@ public class Enemy : Character
     {
         attackArea.SetActive(false);
     }
+
 }

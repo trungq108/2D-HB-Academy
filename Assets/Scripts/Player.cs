@@ -10,6 +10,7 @@ public class Player : Character
     [SerializeField] float jumpForce = 400f;
     [SerializeField] LayerMask groundLayerMask;
     [SerializeField] Transform kunaiPrefab;
+    [SerializeField] int kunaiIndex;
     [SerializeField] Transform puzzle;
     [SerializeField] GameObject attackArea;
 
@@ -18,6 +19,7 @@ public class Player : Character
     bool isAttack;
     bool isDead;
     float horizontal;
+    public float kunaiCooldown;
     Vector3 savePoint;
 
     public override void OnInit()
@@ -29,6 +31,7 @@ public class Player : Character
         transform.position = savePoint;
         SavePoint();
         DeActiveAttack();
+        kunaiIndex = 3;
     }
 
     public override void Despawn()
@@ -46,6 +49,12 @@ public class Player : Character
     {
         if(IsDead) { return; }
 
+        kunaiCooldown += Time.deltaTime;
+        if(kunaiCooldown > 5) 
+        {
+            kunaiIndex = 3;
+            kunaiCooldown = 0;
+        }
         isGround = CheckGround();
         float horizontal = Input.GetAxisRaw("Horizontal");
 
@@ -69,7 +78,7 @@ public class Player : Character
                 Attack();
             }
 
-            if(Input.GetKeyDown(KeyCode.V))
+            if(Input.GetKeyDown(KeyCode.V) && kunaiIndex > 0)
             {
                 Throw();
             }
@@ -100,15 +109,6 @@ public class Player : Character
         }
     }
 
-    private void FixedUpdate()
-    {
-        //if (Mathf.Abs(horizontal) > Mathf.Epsilon)
-        //{
-        //    rb.velocity = new Vector2(horizontal * moveSpeed * Time.fixedDeltaTime, rb.velocity.y);
-        //    transform.eulerAngles = new Vector3(0, horizontal > 0 ? 0 : 180, 0);
-        //}
-    }
-
     public void SetDirection(float direct)
     {
         horizontal = direct;
@@ -119,6 +119,11 @@ public class Player : Character
         Instantiate(kunaiPrefab, puzzle.transform.position, puzzle.transform.rotation);
         ChangeAnim("throw");
         isAttack = true;
+        kunaiIndex--;
+        if(kunaiIndex == 0)
+        {
+            kunaiCooldown += Time.deltaTime;
+        }
         Invoke(nameof(ResetAttack), 0.3f);
 
     }
@@ -169,6 +174,18 @@ public class Player : Character
             ChangeAnim("die");
             Invoke(nameof(OnInit), 0.5f);
         }
+        if (collision.gameObject.name == "HealthPotion")
+        {
+            Debug.Log("healed");
+            Healing(0.3f);
+            Destroy(collision.gameObject);
+        }
+        if (collision.gameObject.name == "WaterPotion")
+        {
+            Debug.Log("water");
+            Destroy(collision.gameObject);
+        }
+
     }
 
     public void SavePoint()

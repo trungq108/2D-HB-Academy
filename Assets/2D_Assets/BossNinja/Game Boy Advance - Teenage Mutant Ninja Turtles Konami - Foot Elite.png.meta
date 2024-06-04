@@ -1,0 +1,920 @@
+fileFormatVersion: 2
+guid: 14ad1bd84838f2144af9f217b62eab8a
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 12
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMasterTextureLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 24
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Game Boy Advance - Teenage Mutant Ninja Turtles Konami - Foot Elite_0
+      rect:
+        serializedVersion: 2
+        x: 6
+        y: 237
+        width: 58
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 502069e4ddfed574ea9306d98db11675
+      internalID: -507838718
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Game Boy Advance - Teenage Mutant Ninja Turtles Konami - Foot Elite_1
+      rect:
+        serializedVersion: 2
+        x: 71
+        y: 237
+        width: 52
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 645a9cd5c253e084b93c4c22a4fa4fce
+      internalID: 1230841575
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Game Boy Advance - Teenage Mutant Ninja Turtles Konami - Foot Elite_2
+      rect:
+        serializedVersion: 2
+        x: 130
+        y: 237
+        width: 48
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 62c1f18b9c64c4949847fc17ec6288c6
+      internalID: -826074748
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Game Boy Advance - Teenage Mutant Ninja Turtles Konami - Foot Elite_3
+      rect:
+        serializedVersion: 2
+        x: 186
+        y: 237
+        width: 56
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2448db5b68ebdee429ea228ae9c62772
+      internalID: 423259448
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Game Boy Advance - Teenage Mutant Ninja Turtles Konami - Foot Elite_4
+      rect:
+        serializedVersion: 2
+        x: 249
+        y: 237
+        width: 60
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8094aa46825ff814cb7c7ce62f306739
+      internalID: 422495550
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Game Boy Advance - Teenage Mutant Ninja Turtles Konami - Foot Elite_5
+      rect:
+        serializedVersion: 2
+        x: 316
+        y: 237
+        width: 74
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6d987fb14c0598744898ea624dff7627
+      internalID: 1840183050
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Game Boy Advance - Teenage Mutant Ninja Turtles Konami - Foot Elite_6
+      rect:
+        serializedVersion: 2
+        x: 397
+        y: 237
+        width: 74
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 647e84483296a1c43b2435b96d3e7cbc
+      internalID: 1896980580
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Game Boy Advance - Teenage Mutant Ninja Turtles Konami - Foot Elite_7
+      rect:
+        serializedVersion: 2
+        x: 478
+        y: 236
+        width: 60
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 124b8ac5bf2231343b4e300b0f313e92
+      internalID: 306524921
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Game Boy Advance - Teenage Mutant Ninja Turtles Konami - Foot Elite_8
+      rect:
+        serializedVersion: 2
+        x: 6
+        y: 159
+        width: 57
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d5a41ff7d39110449969395682c7193b
+      internalID: -1137176735
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Game Boy Advance - Teenage Mutant Ninja Turtles Konami - Foot Elite_9
+      rect:
+        serializedVersion: 2
+        x: 69
+        y: 159
+        width: 55
+        height: 65
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 63c40514c0587024881c2568583c8fc8
+      internalID: -1205037281
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Game Boy Advance - Teenage Mutant Ninja Turtles Konami - Foot Elite_10
+      rect:
+        serializedVersion: 2
+        x: 131
+        y: 159
+        width: 66
+        height: 68
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 66a2bf4e653cb184f9c61440ccb47ebe
+      internalID: 1167241623
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Game Boy Advance - Teenage Mutant Ninja Turtles Konami - Foot Elite_11
+      rect:
+        serializedVersion: 2
+        x: 204
+        y: 159
+        width: 67
+        height: 70
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e8f3a9d665d8ba642aa1bf556dd60b8b
+      internalID: -409933940
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Game Boy Advance - Teenage Mutant Ninja Turtles Konami - Foot Elite_12
+      rect:
+        serializedVersion: 2
+        x: 279
+        y: 159
+        width: 53
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8eeab6691ef185b47b6a00bda88c8a40
+      internalID: -1973072080
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Game Boy Advance - Teenage Mutant Ninja Turtles Konami - Foot Elite_13
+      rect:
+        serializedVersion: 2
+        x: 340
+        y: 159
+        width: 64
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8bf99ae0ad0e67643b45315e6bbd26c4
+      internalID: -1500433629
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Game Boy Advance - Teenage Mutant Ninja Turtles Konami - Foot Elite_14
+      rect:
+        serializedVersion: 2
+        x: 412
+        y: 159
+        width: 60
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 23bbd505e6a6c72439f409804b1dbb45
+      internalID: -541009041
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Game Boy Advance - Teenage Mutant Ninja Turtles Konami - Foot Elite_15
+      rect:
+        serializedVersion: 2
+        x: 480
+        y: 159
+        width: 46
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0f41e2cda4759fd4ba4a8e18764e2488
+      internalID: 718914850
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Game Boy Advance - Teenage Mutant Ninja Turtles Konami - Foot Elite_16
+      rect:
+        serializedVersion: 2
+        x: 6
+        y: 87
+        width: 44
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9253c2d582110554b9f894ece7c5ee38
+      internalID: 1214226148
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Game Boy Advance - Teenage Mutant Ninja Turtles Konami - Foot Elite_17
+      rect:
+        serializedVersion: 2
+        x: 59
+        y: 87
+        width: 43
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ce571a6ed5952c44da4476f45d7d00c6
+      internalID: 1716520917
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Game Boy Advance - Teenage Mutant Ninja Turtles Konami - Foot Elite_18
+      rect:
+        serializedVersion: 2
+        x: 109
+        y: 95
+        width: 40
+        height: 35
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d82deb4dfbb3fb8429db45d5d619980b
+      internalID: -646041487
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Game Boy Advance - Teenage Mutant Ninja Turtles Konami - Foot Elite_19
+      rect:
+        serializedVersion: 2
+        x: 158
+        y: 87
+        width: 13
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6c4132c55d79c5145b76b8aabfc4c209
+      internalID: 2111441369
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Game Boy Advance - Teenage Mutant Ninja Turtles Konami - Foot Elite_20
+      rect:
+        serializedVersion: 2
+        x: 178
+        y: 93
+        width: 35
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7eaa8cb8ce52abc48b2ef0326411c284
+      internalID: 1277999729
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Game Boy Advance - Teenage Mutant Ninja Turtles Konami - Foot Elite_21
+      rect:
+        serializedVersion: 2
+        x: 222
+        y: 106
+        width: 53
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b59042a710100d34e8f0c44c116e994a
+      internalID: -272009095
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Game Boy Advance - Teenage Mutant Ninja Turtles Konami - Foot Elite_22
+      rect:
+        serializedVersion: 2
+        x: 282
+        y: 87
+        width: 55
+        height: 65
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c5f577ac5a3530145a9ee6cf1d38c783
+      internalID: 2137907649
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Game Boy Advance - Teenage Mutant Ninja Turtles Konami - Foot Elite_23
+      rect:
+        serializedVersion: 2
+        x: 344
+        y: 87
+        width: 57
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7406da8b046920648ad7432f0e6712f1
+      internalID: -383400661
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Game Boy Advance - Teenage Mutant Ninja Turtles Konami - Foot Elite_24
+      rect:
+        serializedVersion: 2
+        x: 408
+        y: 84
+        width: 52
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f2af387fc2f44e7428bd78f0925e6855
+      internalID: 28227620
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Game Boy Advance - Teenage Mutant Ninja Turtles Konami - Foot Elite_25
+      rect:
+        serializedVersion: 2
+        x: 466
+        y: 87
+        width: 63
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6980fa001eb64c04bb7b5972b8db7268
+      internalID: -1121161693
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Game Boy Advance - Teenage Mutant Ninja Turtles Konami - Foot Elite_26
+      rect:
+        serializedVersion: 2
+        x: 6
+        y: 35
+        width: 55
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c4cb8fabcfbd62249813cbf1507e3602
+      internalID: -1777668464
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Game Boy Advance - Teenage Mutant Ninja Turtles Konami - Foot Elite_27
+      rect:
+        serializedVersion: 2
+        x: 70
+        y: 35
+        width: 64
+        height: 42
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9077ab7771ed7944fa5a926b1c05a5f7
+      internalID: 1368338320
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Game Boy Advance - Teenage Mutant Ninja Turtles Konami - Foot Elite_28
+      rect:
+        serializedVersion: 2
+        x: 141
+        y: 35
+        width: 71
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dc4cf887352874448b1173e692e8012c
+      internalID: 667167083
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Game Boy Advance - Teenage Mutant Ninja Turtles Konami - Foot Elite_29
+      rect:
+        serializedVersion: 2
+        x: 220
+        y: 35
+        width: 79
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 37288cd68fa65034981e1b446fe71dba
+      internalID: -370759660
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Game Boy Advance - Teenage Mutant Ninja Turtles Konami - Foot Elite_30
+      rect:
+        serializedVersion: 2
+        x: 307
+        y: 35
+        width: 79
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ab855b8e03803114eb64767b5b45f157
+      internalID: -51133151
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Game Boy Advance - Teenage Mutant Ninja Turtles Konami - Foot Elite_31
+      rect:
+        serializedVersion: 2
+        x: 394
+        y: 35
+        width: 80
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 977250ab956773d4d8ed7b7fc4308e5d
+      internalID: 1762893697
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Game Boy Advance - Teenage Mutant Ninja Turtles Konami - Foot Elite_32
+      rect:
+        serializedVersion: 2
+        x: 497
+        y: 46
+        width: 22
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 752d7e45dd1903946b727680c504fcca
+      internalID: -154941644
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      Game Boy Advance - Teenage Mutant Ninja Turtles Konami - Foot Elite_0: -507838718
+      Game Boy Advance - Teenage Mutant Ninja Turtles Konami - Foot Elite_1: 1230841575
+      Game Boy Advance - Teenage Mutant Ninja Turtles Konami - Foot Elite_10: 1167241623
+      Game Boy Advance - Teenage Mutant Ninja Turtles Konami - Foot Elite_100: -1637987946
+      Game Boy Advance - Teenage Mutant Ninja Turtles Konami - Foot Elite_101: -293452852
+      Game Boy Advance - Teenage Mutant Ninja Turtles Konami - Foot Elite_102: -1243769315
+      Game Boy Advance - Teenage Mutant Ninja Turtles Konami - Foot Elite_103: -1439200214
+      Game Boy Advance - Teenage Mutant Ninja Turtles Konami - Foot Elite_11: -409933940
+      Game Boy Advance - Teenage Mutant Ninja Turtles Konami - Foot Elite_12: -1973072080
+      Game Boy Advance - Teenage Mutant Ninja Turtles Konami - Foot Elite_13: -1500433629
+      Game Boy Advance - Teenage Mutant Ninja Turtles Konami - Foot Elite_14: -541009041
+      Game Boy Advance - Teenage Mutant Ninja Turtles Konami - Foot Elite_15: 718914850
+      Game Boy Advance - Teenage Mutant Ninja Turtles Konami - Foot Elite_16: 1214226148
+      Game Boy Advance - Teenage Mutant Ninja Turtles Konami - Foot Elite_17: 1716520917
+      Game Boy Advance - Teenage Mutant Ninja Turtles Konami - Foot Elite_18: -646041487
+      Game Boy Advance - Teenage Mutant Ninja Turtles Konami - Foot Elite_19: 2111441369
+      Game Boy Advance - Teenage Mutant Ninja Turtles Konami - Foot Elite_2: -826074748
+      Game Boy Advance - Teenage Mutant Ninja Turtles Konami - Foot Elite_20: 1277999729
+      Game Boy Advance - Teenage Mutant Ninja Turtles Konami - Foot Elite_21: -272009095
+      Game Boy Advance - Teenage Mutant Ninja Turtles Konami - Foot Elite_22: 2137907649
+      Game Boy Advance - Teenage Mutant Ninja Turtles Konami - Foot Elite_23: -383400661
+      Game Boy Advance - Teenage Mutant Ninja Turtles Konami - Foot Elite_24: 28227620
+      Game Boy Advance - Teenage Mutant Ninja Turtles Konami - Foot Elite_25: -1121161693
+      Game Boy Advance - Teenage Mutant Ninja Turtles Konami - Foot Elite_26: -1777668464
+      Game Boy Advance - Teenage Mutant Ninja Turtles Konami - Foot Elite_27: 1368338320
+      Game Boy Advance - Teenage Mutant Ninja Turtles Konami - Foot Elite_28: 667167083
+      Game Boy Advance - Teenage Mutant Ninja Turtles Konami - Foot Elite_29: -370759660
+      Game Boy Advance - Teenage Mutant Ninja Turtles Konami - Foot Elite_3: 423259448
+      Game Boy Advance - Teenage Mutant Ninja Turtles Konami - Foot Elite_30: -51133151
+      Game Boy Advance - Teenage Mutant Ninja Turtles Konami - Foot Elite_31: 1762893697
+      Game Boy Advance - Teenage Mutant Ninja Turtles Konami - Foot Elite_32: -154941644
+      Game Boy Advance - Teenage Mutant Ninja Turtles Konami - Foot Elite_33: 1681411730
+      Game Boy Advance - Teenage Mutant Ninja Turtles Konami - Foot Elite_34: -1192881570
+      Game Boy Advance - Teenage Mutant Ninja Turtles Konami - Foot Elite_35: -1940663749
+      Game Boy Advance - Teenage Mutant Ninja Turtles Konami - Foot Elite_36: 1936088145
+      Game Boy Advance - Teenage Mutant Ninja Turtles Konami - Foot Elite_37: 1560120031
+      Game Boy Advance - Teenage Mutant Ninja Turtles Konami - Foot Elite_38: 195397689
+      Game Boy Advance - Teenage Mutant Ninja Turtles Konami - Foot Elite_39: 613642135
+      Game Boy Advance - Teenage Mutant Ninja Turtles Konami - Foot Elite_4: 422495550
+      Game Boy Advance - Teenage Mutant Ninja Turtles Konami - Foot Elite_40: -861862416
+      Game Boy Advance - Teenage Mutant Ninja Turtles Konami - Foot Elite_41: 76680491
+      Game Boy Advance - Teenage Mutant Ninja Turtles Konami - Foot Elite_42: -1673768982
+      Game Boy Advance - Teenage Mutant Ninja Turtles Konami - Foot Elite_43: 1047469042
+      Game Boy Advance - Teenage Mutant Ninja Turtles Konami - Foot Elite_44: 687234880
+      Game Boy Advance - Teenage Mutant Ninja Turtles Konami - Foot Elite_45: -1684097691
+      Game Boy Advance - Teenage Mutant Ninja Turtles Konami - Foot Elite_46: 697466926
+      Game Boy Advance - Teenage Mutant Ninja Turtles Konami - Foot Elite_47: -545839598
+      Game Boy Advance - Teenage Mutant Ninja Turtles Konami - Foot Elite_48: -1155407575
+      Game Boy Advance - Teenage Mutant Ninja Turtles Konami - Foot Elite_49: -2045644334
+      Game Boy Advance - Teenage Mutant Ninja Turtles Konami - Foot Elite_5: 1840183050
+      Game Boy Advance - Teenage Mutant Ninja Turtles Konami - Foot Elite_50: -1872307015
+      Game Boy Advance - Teenage Mutant Ninja Turtles Konami - Foot Elite_51: 18730465
+      Game Boy Advance - Teenage Mutant Ninja Turtles Konami - Foot Elite_52: 1640587570
+      Game Boy Advance - Teenage Mutant Ninja Turtles Konami - Foot Elite_53: -333360909
+      Game Boy Advance - Teenage Mutant Ninja Turtles Konami - Foot Elite_54: -548392753
+      Game Boy Advance - Teenage Mutant Ninja Turtles Konami - Foot Elite_55: 1723454515
+      Game Boy Advance - Teenage Mutant Ninja Turtles Konami - Foot Elite_56: -1161266315
+      Game Boy Advance - Teenage Mutant Ninja Turtles Konami - Foot Elite_57: 955557757
+      Game Boy Advance - Teenage Mutant Ninja Turtles Konami - Foot Elite_58: 435117795
+      Game Boy Advance - Teenage Mutant Ninja Turtles Konami - Foot Elite_59: -1908392138
+      Game Boy Advance - Teenage Mutant Ninja Turtles Konami - Foot Elite_6: 1896980580
+      Game Boy Advance - Teenage Mutant Ninja Turtles Konami - Foot Elite_60: 2056137960
+      Game Boy Advance - Teenage Mutant Ninja Turtles Konami - Foot Elite_61: -84742767
+      Game Boy Advance - Teenage Mutant Ninja Turtles Konami - Foot Elite_62: -1173221998
+      Game Boy Advance - Teenage Mutant Ninja Turtles Konami - Foot Elite_63: 177118003
+      Game Boy Advance - Teenage Mutant Ninja Turtles Konami - Foot Elite_64: -1826081025
+      Game Boy Advance - Teenage Mutant Ninja Turtles Konami - Foot Elite_65: 1933988238
+      Game Boy Advance - Teenage Mutant Ninja Turtles Konami - Foot Elite_66: -684252308
+      Game Boy Advance - Teenage Mutant Ninja Turtles Konami - Foot Elite_67: -1921756390
+      Game Boy Advance - Teenage Mutant Ninja Turtles Konami - Foot Elite_68: 566749449
+      Game Boy Advance - Teenage Mutant Ninja Turtles Konami - Foot Elite_69: -1959771512
+      Game Boy Advance - Teenage Mutant Ninja Turtles Konami - Foot Elite_7: 306524921
+      Game Boy Advance - Teenage Mutant Ninja Turtles Konami - Foot Elite_70: -1099601729
+      Game Boy Advance - Teenage Mutant Ninja Turtles Konami - Foot Elite_71: 191508417
+      Game Boy Advance - Teenage Mutant Ninja Turtles Konami - Foot Elite_72: 458956082
+      Game Boy Advance - Teenage Mutant Ninja Turtles Konami - Foot Elite_73: -1442325803
+      Game Boy Advance - Teenage Mutant Ninja Turtles Konami - Foot Elite_74: 980251406
+      Game Boy Advance - Teenage Mutant Ninja Turtles Konami - Foot Elite_75: 1129175540
+      Game Boy Advance - Teenage Mutant Ninja Turtles Konami - Foot Elite_76: -1539495302
+      Game Boy Advance - Teenage Mutant Ninja Turtles Konami - Foot Elite_77: 611697464
+      Game Boy Advance - Teenage Mutant Ninja Turtles Konami - Foot Elite_78: 1023469525
+      Game Boy Advance - Teenage Mutant Ninja Turtles Konami - Foot Elite_79: -1358580978
+      Game Boy Advance - Teenage Mutant Ninja Turtles Konami - Foot Elite_8: -1137176735
+      Game Boy Advance - Teenage Mutant Ninja Turtles Konami - Foot Elite_80: -976690790
+      Game Boy Advance - Teenage Mutant Ninja Turtles Konami - Foot Elite_81: 661197200
+      Game Boy Advance - Teenage Mutant Ninja Turtles Konami - Foot Elite_82: 1294744603
+      Game Boy Advance - Teenage Mutant Ninja Turtles Konami - Foot Elite_83: -797721245
+      Game Boy Advance - Teenage Mutant Ninja Turtles Konami - Foot Elite_84: -13347997
+      Game Boy Advance - Teenage Mutant Ninja Turtles Konami - Foot Elite_85: -2116684853
+      Game Boy Advance - Teenage Mutant Ninja Turtles Konami - Foot Elite_86: 1725418494
+      Game Boy Advance - Teenage Mutant Ninja Turtles Konami - Foot Elite_87: -92226970
+      Game Boy Advance - Teenage Mutant Ninja Turtles Konami - Foot Elite_88: 1711422174
+      Game Boy Advance - Teenage Mutant Ninja Turtles Konami - Foot Elite_89: -1859205744
+      Game Boy Advance - Teenage Mutant Ninja Turtles Konami - Foot Elite_9: -1205037281
+      Game Boy Advance - Teenage Mutant Ninja Turtles Konami - Foot Elite_90: 948735010
+      Game Boy Advance - Teenage Mutant Ninja Turtles Konami - Foot Elite_91: -1419829333
+      Game Boy Advance - Teenage Mutant Ninja Turtles Konami - Foot Elite_92: -1794536162
+      Game Boy Advance - Teenage Mutant Ninja Turtles Konami - Foot Elite_93: 691676757
+      Game Boy Advance - Teenage Mutant Ninja Turtles Konami - Foot Elite_94: 1657050499
+      Game Boy Advance - Teenage Mutant Ninja Turtles Konami - Foot Elite_95: 288574707
+      Game Boy Advance - Teenage Mutant Ninja Turtles Konami - Foot Elite_96: -418861826
+      Game Boy Advance - Teenage Mutant Ninja Turtles Konami - Foot Elite_97: 698558091
+      Game Boy Advance - Teenage Mutant Ninja Turtles Konami - Foot Elite_98: -202786848
+      Game Boy Advance - Teenage Mutant Ninja Turtles Konami - Foot Elite_99: 1795507322
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

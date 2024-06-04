@@ -29,7 +29,7 @@ Transform:
   m_GameObject: {fileID: 8139700221317432024}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 5, y: 1, z: 1}
+  m_LocalScale: {x: 14.78, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 8139700221995818138}
@@ -146,7 +146,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 63475059f05f27b4686f3280ce002684, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemy: {fileID: 8139700221995818137}
+  enemy: {fileID: 3384506896161198182}
 --- !u!1 &8139700221419476166
 GameObject:
   m_ObjectHideFlags: 0
@@ -173,8 +173,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8139700221419476166}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.06, z: 0}
-  m_LocalScale: {x: 0.49, y: 0.49, z: 0.49}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 8139700221995818138}
@@ -221,7 +221,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 31
-  m_Sprite: {fileID: 21300000, guid: 8a5c9b8dc2b8362459619070e4b36175, type: 3}
+  m_Sprite: {fileID: -507838718, guid: 14ad1bd84838f2144af9f217b62eab8a, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -336,10 +336,10 @@ GameObject:
   - component: {fileID: 8139700221995818138}
   - component: {fileID: 8139700221995818139}
   - component: {fileID: 8139700221995818140}
-  - component: {fileID: 8139700221995818137}
+  - component: {fileID: 3384506896161198182}
   - component: {fileID: -65373701017056991}
   m_Layer: 7
-  m_Name: Enemy
+  m_Name: Boss
   m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -400,7 +400,7 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
---- !u!114 &8139700221995818137
+--- !u!114 &3384506896161198182
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -409,15 +409,15 @@ MonoBehaviour:
   m_GameObject: {fileID: 8139700221995818142}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 97b9bda51f7707b4abc1e62c74af3d69, type: 3}
+  m_Script: {fileID: 11500000, guid: c1bdf417ed1753a4b98b9e936c20de18, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   animator: {fileID: 8139700221419476165}
   heathBar: {fileID: 0}
   combatTextPrefab: {fileID: 1489828828925186718, guid: 5e1dda213b616fd4bbdac722cb29e67e, type: 3}
-  maxHp: 100
+  maxHp: 300
   attackRange: 1
-  moveSpeed: 400
+  moveSpeed: 0
   rb: {fileID: 8139700221995818140}
   attackArea: {fileID: 8139700221532993308}
   lootBag: {fileID: -65373701017056991}
