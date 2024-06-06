@@ -122,6 +122,7 @@ public class Enemy : Character
         this.isRight = isRight;
         transform.rotation = isRight ? Quaternion.Euler(Vector3.zero) : Quaternion.Euler(Vector3.up * 180);
     }
+
     public virtual void ActiveAttack()
     {
         attackArea.SetActive(true);

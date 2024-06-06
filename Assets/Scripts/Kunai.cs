@@ -8,6 +8,8 @@ public class Kunai : MonoBehaviour
     [SerializeField] GameObject bloodVFX;
     [SerializeField] float speed = 20f;
 
+    private int damage;
+
     private void Start()
     {
         OnInit();
@@ -28,11 +30,14 @@ public class Kunai : MonoBehaviour
     {
         if (collision.CompareTag("Enemy"))
         {
-            Debug.Log("Shot");
             Instantiate(bloodVFX, transform.position, transform.rotation);
-            collision.GetComponent<Character>().OnHit(30);
+            collision.GetComponent<Character>().OnHit(damage);
             OnDespawn();
         }
     }
 
+    public void SetDamage(int damage)
+    {
+        this.damage = damage;
+    }
 }

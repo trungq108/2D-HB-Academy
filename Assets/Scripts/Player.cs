@@ -10,17 +10,18 @@ public class Player : Character
     [SerializeField] float moveSpeed = 250f;
     [SerializeField] float jumpForce = 400f;
     [SerializeField] LayerMask groundLayerMask;
-    [SerializeField] Transform kunaiPrefab;
+    [SerializeField] Kunai kunaiPrefab;
     [SerializeField] int kunaiIndex;
     [SerializeField] Transform puzzle;
-    [SerializeField] GameObject attackArea;
+    [SerializeField] AttackArea attackArea;
+    [SerializeField] private int strength = 30;
+    [SerializeField] float kunaiCooldown = 10f;
 
     bool isGround;
     bool isJumping;
     bool isAttack;
     bool isDead;
     float horizontal;
-    public float kunaiCooldown;
     Vector3 savePoint;
 
     public override void OnInit()
@@ -50,12 +51,6 @@ public class Player : Character
     {
         if(IsDead) { return; }
 
-        //kunaiCooldown += Time.deltaTime;
-        //if(kunaiCooldown > 5) 
-        //{
-        //    kunaiIndex = 3;
-        //    kunaiCooldown = 0;
-        //}
         isGround = CheckGround();
         float horizontal = Input.GetAxisRaw("Horizontal");
 
@@ -121,13 +116,14 @@ public class Player : Character
         if (isAttack) return;
 
         kunaiIndex--;
-        Instantiate(kunaiPrefab, puzzle.transform.position, puzzle.transform.rotation);
+        Kunai newKunai = Instantiate(kunaiPrefab, puzzle.transform.position, puzzle.transform.rotation);
+        newKunai.SetDamage(strength);
         UIController.Instance.InitTextBullet(kunaiIndex);
         ChangeAnim("throw");
         isAttack = true;
         if (kunaiIndex <= 0)
         {
-            Invoke(nameof(ResetKunai), 10f);
+            Invoke(nameof(ResetKunai), kunaiCooldown);
         }
 
         Invoke(nameof(ResetAttack), 0.3f);
@@ -141,11 +137,13 @@ public class Player : Character
 
     public void Attack()
     {
-        if (isAttack) return;
-        ChangeAnim("attack");
+        if(isAttack) return;
+
         isAttack = true;
-        Invoke(nameof(ResetAttack), 0.5f);
+        
+        ChangeAnim("attack");
         ActiveAttack();
+        Invoke(nameof(ResetAttack), 1f);
         Invoke(nameof(DeActiveAttack), 0.5f);
     }
 
@@ -165,12 +163,13 @@ public class Player : Character
 
     void ActiveAttack()
     {
-        attackArea.SetActive(true);
+        attackArea.SetDamage(strength);
+        attackArea.gameObject.SetActive(true);
     }
 
     void DeActiveAttack()
     {
-        attackArea.SetActive(false);
+        attackArea.gameObject.SetActive(false);
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -178,7 +177,10 @@ public class Player : Character
         if (collision.CompareTag("Coin"))
         {
             UIController.Instance.SetCoin(1);
+            BuffDamage(5);
+            Debug.Log("get coin");
             Destroy(collision.gameObject);
+
         }
         if (collision.CompareTag("DeadZone"))
         {
@@ -198,6 +200,14 @@ public class Player : Character
             Destroy(collision.gameObject);
         }
 
+    }
+
+    private void BuffDamage(int percent)
+    {
+        int newStreng = strength * percent / 100;
+        Debug.Log(newStreng);
+        strength += newStreng;
+        Debug.Log(strength);
     }
 
     public void SavePoint()

@@ -3,24 +3,16 @@ using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 
-public class UIController : MonoBehaviour
+public class UIController : Singleton<UIController>
 {
-    public static UIController instance;
-    public static UIController Instance => instance;
-
     [SerializeField] TextMeshProUGUI coinText;
     [SerializeField] TextMeshProUGUI bulletText;
 
-    private int coinIndex = 0;
+    private int coinIndex;
 
     private void Awake()
     {
-        if (instance == null)
-        {
-            instance = this;
-        }
-        else Destroy(this.gameObject);
-
+        coinIndex = 0;
         SetCoin(0);
     }
 
@@ -32,7 +24,7 @@ public class UIController : MonoBehaviour
     public void SetCoin(int coin)
     {
         coinIndex += coin;
-        coinText.text = coin.ToString();
+        coinText.text = coinIndex.ToString();
     }
 
 }
