@@ -14,4 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemName: WaterPotion
   itemSprite: {fileID: 21300000, guid: 4f0fdb1510f8a2b468ea4ff93c773f8d, type: 3}
-  dropWeight: 50
+  dropWeight: 60

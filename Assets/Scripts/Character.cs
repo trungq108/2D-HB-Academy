@@ -32,6 +32,7 @@ public class Character : MonoBehaviour
 
     protected virtual void OnDead()
     {
+
         ChangeAnim("die");
         Invoke(nameof(Despawn) , 2f);
     }

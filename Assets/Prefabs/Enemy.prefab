@@ -419,6 +419,7 @@ MonoBehaviour:
   attackRange: 1
   moveSpeed: 400
   rb: {fileID: 8139700221995818140}
+  capsuleCollider: {fileID: 8139700221995818139}
   attackArea: {fileID: 8139700221532993308}
   lootBag: {fileID: -65373701017056991}
 --- !u!114 &-65373701017056991

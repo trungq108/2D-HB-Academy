@@ -9,6 +9,8 @@ public class UIController : MonoBehaviour
     public static UIController Instance => instance;
 
     [SerializeField] TextMeshProUGUI coinText;
+    [SerializeField] TextMeshProUGUI bulletText;
+
     private int coinIndex = 0;
 
     private void Awake()
@@ -20,6 +22,11 @@ public class UIController : MonoBehaviour
         else Destroy(this.gameObject);
 
         SetCoin(0);
+    }
+
+    public void InitTextBullet(int bullet)
+    {
+        bulletText.text = bullet.ToString();
     }
 
     public void SetCoin(int coin)

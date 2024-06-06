@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -49,12 +50,12 @@ public class Player : Character
     {
         if(IsDead) { return; }
 
-        kunaiCooldown += Time.deltaTime;
-        if(kunaiCooldown > 5) 
-        {
-            kunaiIndex = 3;
-            kunaiCooldown = 0;
-        }
+        //kunaiCooldown += Time.deltaTime;
+        //if(kunaiCooldown > 5) 
+        //{
+        //    kunaiIndex = 3;
+        //    kunaiCooldown = 0;
+        //}
         isGround = CheckGround();
         float horizontal = Input.GetAxisRaw("Horizontal");
 
@@ -116,31 +117,41 @@ public class Player : Character
 
     public void Throw()
     {
+        if (kunaiIndex <= 0) return;
+        if (isAttack) return;
+
+        kunaiIndex--;
         Instantiate(kunaiPrefab, puzzle.transform.position, puzzle.transform.rotation);
+        UIController.Instance.InitTextBullet(kunaiIndex);
         ChangeAnim("throw");
         isAttack = true;
-        kunaiIndex--;
-        if(kunaiIndex == 0)
+        if (kunaiIndex <= 0)
         {
-            kunaiCooldown += Time.deltaTime;
+            Invoke(nameof(ResetKunai), 10f);
         }
-        Invoke(nameof(ResetAttack), 0.3f);
 
+        Invoke(nameof(ResetAttack), 0.3f);
+    }
+
+    private void ResetKunai()
+    {
+        kunaiIndex = 3;
+        UIController.Instance.InitTextBullet(kunaiIndex);
     }
 
     public void Attack()
     {
-        if (isGround)
-        {
-            ChangeAnim("attack");
-            isAttack = true;
-            Invoke(nameof(ResetAttack), 0.5f);
-            ActiveAttack();
-            Invoke(nameof(DeActiveAttack), 0.5f);
-        }
+        if (isAttack) return;
+        ChangeAnim("attack");
+        isAttack = true;
+        Invoke(nameof(ResetAttack), 0.5f);
+        ActiveAttack();
+        Invoke(nameof(DeActiveAttack), 0.5f);
     }
+
     public void Jump()
     {
+        if(!isGround) return;
         rb.AddForce(Vector2.up * jumpForce);
         ChangeAnim("jump");
         isJumping = true;
@@ -183,6 +194,7 @@ public class Player : Character
         if (collision.gameObject.name == "WaterPotion")
         {
             Debug.Log("water");
+            WaterSetting.Instance.WaterOn();
             Destroy(collision.gameObject);
         }
 

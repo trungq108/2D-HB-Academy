@@ -8,7 +8,6 @@ public class LootBag : MonoBehaviour
     [SerializeField] private GameObject lootObjectPrefab;
     [SerializeField] private List<LootItem> lootItems; 
 
-
     public LootItem GetDropItems()
     {
         int randomPercent = Random.Range(1, 101);
@@ -34,8 +33,11 @@ public class LootBag : MonoBehaviour
     public void InstantiateItem(Vector3 spawnPosition)
     {
         LootItem dropItem = GetDropItems();
-        GameObject newItemDrop = Instantiate(lootObjectPrefab, spawnPosition, Quaternion.identity);
-        newItemDrop.GetComponent<SpriteRenderer>().sprite = dropItem.itemSprite;
-        newItemDrop.name = dropItem.itemName;
+        if(dropItem != null)
+        {
+            GameObject newItemDrop = Instantiate(lootObjectPrefab, spawnPosition, Quaternion.identity);
+            newItemDrop.GetComponent<SpriteRenderer>().sprite = dropItem.itemSprite;
+            newItemDrop.name = dropItem.itemName;
+        }
     }
 }

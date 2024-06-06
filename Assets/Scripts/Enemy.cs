@@ -9,6 +9,9 @@ public class Enemy : Character
     [SerializeField] float attackRange = 1f;
     [SerializeField] float moveSpeed;
     [SerializeField] Rigidbody2D rb;
+    [SerializeField] CapsuleCollider2D capsuleCollider;
+
+    private int damage;
     private IState currentState;
     bool isRight = true;
     [SerializeField] GameObject attackArea;
@@ -40,11 +43,12 @@ public class Enemy : Character
 
     protected override void OnDead()
     {
-        lootBag.InstantiateItem(transform.position);
+     // capsuleCollider.enabled = false;
+        lootBag.InstantiateItem(this.transform.position);
         ChangeState(null);
         base.OnDead();
     }
-
+     
     public void ChangeState(IState newState)
     {
         if(currentState != null)

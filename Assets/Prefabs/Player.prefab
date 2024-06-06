@@ -120,6 +120,7 @@ MonoBehaviour:
   animator: {fileID: 4620513433949329829}
   heathBar: {fileID: 0}
   combatTextPrefab: {fileID: 1489828828925186718, guid: 5e1dda213b616fd4bbdac722cb29e67e, type: 3}
+  maxHp: 100
   rb: {fileID: 4620513433141838454}
   moveSpeed: 250
   jumpForce: 400
@@ -127,8 +128,10 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 64
   kunaiPrefab: {fileID: 4271566469994153049, guid: de08b0e25fb64514084aafe9102d0d3d, type: 3}
+  kunaiIndex: 3
   puzzle: {fileID: 4620513433117967072}
   attackArea: {fileID: 4620513433225977518}
+  kunaiCooldown: 0
 --- !u!1 &4620513433225977518
 GameObject:
   m_ObjectHideFlags: 0
