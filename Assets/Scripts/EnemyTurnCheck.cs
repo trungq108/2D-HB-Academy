@@ -4,10 +4,16 @@ using UnityEngine;
 
 public class EnemyTurnCheck : MonoBehaviour
 {
+    [SerializeField] LayerMask groundLayer;
     [SerializeField] Enemy enemy;
+    private bool IsRight;
 
     private void OnTriggerExit2D(Collider2D collision)
     {
-        enemy.ChangeDirection(true);
+        if(collision.gameObject.layer == groundLayer)
+        {
+            IsRight = enemy.IsRight;
+            enemy.ChangeDirection(!IsRight);
+        }
     }
 }

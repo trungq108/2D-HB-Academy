@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using Unity.Mathematics;
 using UnityEngine;
 using UnityEngine.UIElements;
 
@@ -208,6 +209,12 @@ public class Player : Character
         Debug.Log(newStreng);
         strength += newStreng;
         Debug.Log(strength);
+    }
+
+    public void Healing(float helthPercent)
+    {
+        hp = Mathf.Clamp(hp, (int)(hp + maxHp * helthPercent), maxHp);
+        heathBar.SetHp(hp);
     }
 
     public void SavePoint()

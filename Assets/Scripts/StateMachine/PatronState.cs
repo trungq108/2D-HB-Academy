@@ -40,10 +40,7 @@ public class PatronState : IState
             {
                 enemy.ChangeState(new IdleState());
             }
-        }
-
-        
-        
+        }     
     }
 
     public void OnExit(Enemy enemy)

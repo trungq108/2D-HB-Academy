@@ -13,7 +13,8 @@ public class Enemy : Character
 
     private int damage;
     private IState currentState;
-    bool isRight = true;
+    bool isRight = true; public bool IsRight => isRight;
+
     [SerializeField] GameObject attackArea;
     [SerializeField] LootBag lootBag;
 
@@ -107,14 +108,6 @@ public class Enemy : Character
             return true;
         }
         else { return false; }
-    }
-
-    private void OnTriggerEnter2D(Collider2D collision)
-    {
-        if (collision.CompareTag("EnemyWall"))
-        {
-            ChangeDirection(!isRight);
-        }
     }
 
     public void ChangeDirection(bool isRight)

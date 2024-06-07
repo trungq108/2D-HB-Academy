@@ -314,6 +314,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 73f1bad496ba1b543b0fabf2e6fd4626, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 64
   enemy: {fileID: 8139700221995818137}
 --- !u!61 &1752258791
 BoxCollider2D:
@@ -672,7 +675,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8139700221995818142}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -7.01, y: -0.83, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -738,7 +741,7 @@ MonoBehaviour:
   combatTextPrefab: {fileID: 1489828828925186718, guid: 5e1dda213b616fd4bbdac722cb29e67e, type: 3}
   maxHp: 100
   attackRange: 1
-  moveSpeed: 400
+  moveSpeed: 1000
   rb: {fileID: 8139700221995818140}
   capsuleCollider: {fileID: 8139700221995818139}
   attackArea: {fileID: 8139700221532993308}

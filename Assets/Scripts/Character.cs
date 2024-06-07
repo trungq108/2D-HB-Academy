@@ -7,10 +7,10 @@ public class Character : MonoBehaviour
     [SerializeField] Animator animator;
     [SerializeField] protected HeathBar heathBar;
     [SerializeField] protected CombatText combatTextPrefab;
-    [SerializeField] private int maxHp = 100;
+    [SerializeField] protected int maxHp = 100;
 
     string currentAnimName;
-    int hp;
+    protected int hp;
 
     public bool IsDead => hp <= 0;
 
@@ -59,9 +59,4 @@ public class Character : MonoBehaviour
         heathBar.SetHp(hp);
     }
 
-    public void Healing(float helthPercent)
-    {
-        hp = Mathf.Clamp(hp, (int)(hp + maxHp * helthPercent), maxHp);
-        heathBar.SetHp(hp);
-    }
 }
