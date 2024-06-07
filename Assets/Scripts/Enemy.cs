@@ -6,16 +6,20 @@ using UnityEngine;
 
 public class Enemy : Character
 {
+    [SerializeField] bool isBoss; public bool IsBoss => isBoss;
     [SerializeField] float attackRange = 1f;
     [SerializeField] float moveSpeed;
     [SerializeField] Rigidbody2D rb;
     [SerializeField] CapsuleCollider2D capsuleCollider;
 
+    [SerializeField] Kunai kunaiPrefab;
+    [SerializeField] Transform puzzle;
+
     private int damage;
     private IState currentState;
-    bool isRight = true; public bool IsRight => isRight;
+    private bool isRight = true; public bool IsRight => isRight;
 
-    [SerializeField] GameObject attackArea;
+    [SerializeField] AttackArea attackArea;
     [SerializeField] LootBag lootBag;
 
     Character target; public Character Target => target;
@@ -49,7 +53,7 @@ public class Enemy : Character
         ChangeState(null);
         base.OnDead();
     }
-     
+    
     public void ChangeState(IState newState)
     {
         if(currentState != null)
@@ -74,7 +78,8 @@ public class Enemy : Character
         }
         else if (target != null)
         {
-            ChangeState(new PatronState());
+            if(isBoss) ChangeState(new RangeAttackState());
+            else ChangeState(new PatronState());
         }
         else
         {
@@ -101,6 +106,13 @@ public class Enemy : Character
         Invoke(nameof(DeActiveAttack), 0.5f);
     }
 
+    public void RangeAttack()
+    {
+        Kunai newKunai = Instantiate(kunaiPrefab, puzzle.transform.position, puzzle.transform.rotation);
+        newKunai.SetDamage(30);
+        ChangeAnim("throw");
+    }
+
     public bool IsTargetInRange()
     { 
         if(target != null && Vector3.Distance(target.transform.position, transform.position) <= attackRange)
@@ -118,12 +130,12 @@ public class Enemy : Character
 
     public virtual void ActiveAttack()
     {
-        attackArea.SetActive(true);
+        attackArea.SetDamage(30);
+        attackArea.gameObject.SetActive(true);
     }
 
     void DeActiveAttack()
     {
-        attackArea.SetActive(false);
+        attackArea.gameObject.SetActive(false);
     }
-
 }

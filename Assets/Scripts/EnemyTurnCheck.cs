@@ -6,14 +6,22 @@ public class EnemyTurnCheck : MonoBehaviour
 {
     [SerializeField] LayerMask groundLayer;
     [SerializeField] Enemy enemy;
-    private bool IsRight;
+
+    private void Update()
+    {
+        //RaycastHit2D hit = Physics2D.Raycast(transform.position , Vector2.down, 3f, groundLayer);
+        //if(hit.collider == null)
+        //{
+        //    enemy.ChangeDirection(!enemy.IsRight);
+        //}
+    }
 
     private void OnTriggerExit2D(Collider2D collision)
     {
         if(collision.gameObject.layer == groundLayer)
         {
-            IsRight = enemy.IsRight;
-            enemy.ChangeDirection(!IsRight);
+            Debug.Log("Turn");
+            enemy.ChangeDirection(!enemy.IsRight);
         }
     }
 }

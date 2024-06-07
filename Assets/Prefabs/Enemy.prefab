@@ -331,7 +331,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 1.05, y: -0.9030213}
+  m_Offset: {x: 0.96263033, y: -0.95441526}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -342,7 +342,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.51, y: 1.4772445}
+  m_Size: {x: 0.10912764, y: 0.92219055}
   m_EdgeRadius: 0
 --- !u!1 &8139700221317432024
 GameObject:
@@ -740,11 +740,14 @@ MonoBehaviour:
   heathBar: {fileID: 520733192}
   combatTextPrefab: {fileID: 1489828828925186718, guid: 5e1dda213b616fd4bbdac722cb29e67e, type: 3}
   maxHp: 100
+  isBoss: 0
   attackRange: 1
   moveSpeed: 1000
   rb: {fileID: 8139700221995818140}
   capsuleCollider: {fileID: 8139700221995818139}
-  attackArea: {fileID: 8139700221532993308}
+  kunaiPrefab: {fileID: 0}
+  puzzle: {fileID: 0}
+  attackArea: {fileID: 8139700221532993305}
   lootBag: {fileID: -65373701017056991}
 --- !u!114 &-65373701017056991
 MonoBehaviour:

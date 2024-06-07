@@ -11,10 +11,11 @@ public class AttackState : IState
         if(enemy.Target != null)
         {
             enemy.ChangeDirection(enemy.Target.transform.position.x > enemy.transform.position.x);
-
             enemy.StopMoving();
             enemy.Attack();
 
+            //if(enemy.IsBoss) enemy.RangeAttack();
+            //else enemy.Attack(); 
         }
     }
 

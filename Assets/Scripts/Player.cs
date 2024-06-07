@@ -31,7 +31,7 @@ public class Player : Character
         ChangeAnim("idle");
         isAttack = false;
         isJumping = false;
-        transform.position = savePoint;
+     // transform.position = savePoint;
         SavePoint();
         DeActiveAttack();
         kunaiIndex = 3;
